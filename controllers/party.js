@@ -26,7 +26,7 @@ router.get('/:id', async (req, res)=> {
 })
 // TODO : push author id to membersSchema
 //CREATE NEW PARTY
-router.post('/', async (req, res) => {
+router.post('/:id', async (req, res) => {
     try {
         const partyCreated = await db.Party.create(req.body)
         console.log(partyCreated)
